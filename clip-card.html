@@ -1,0 +1,270 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: #4caf50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+}
+
+.card1 {
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.card2 {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card card1">Card 1</div>
+        <div class="card card2">Card 2</div>
+        <div class="card card1">Card 3</div>
+        <div class="card card2">Card 4</div>
+    </div>
+    <script src="script.js">
+        // Example: Add interactivity if needed
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+        alert(card.textContent);
+    });
+});
+
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards with Clip-Path and Hover Animation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .card {
+        width: 200px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.3s ease;
+        border-radius: 3px;
+        background-color: rgba(255, 255, 255, 0.9019607843137255);
+        filter: drop-shadow(0px 10px 30px rgba(116, 100, 95, 0.2));
+        text-align: center;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .card1 {
+        clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+      }
+
+      .card2 {
+        clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+      }
+
+      .card3 {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+      }
+
+      .card4 {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./images/box-bg3.png);
+        transition: bottom 0.5s ease;
+      }
+
+      .card:hover::before,
+      .service-content p,
+      .service-box-title h3 {
+        bottom: 0;
+        z-index: -1;
+        color: #f0f0f0;
+      }
+
+      span.service-box-number {
+        font-size: 24px;
+        font-weight: 500;
+        font-family: "Fira Sans";
+        line-height: 56px;
+        color: #fff;
+        position: relative;
+        z-index: 22;
+        opacity: 1;
+        top: 55px;
+      }
+      span.service-box-number:before {
+        position: absolute;
+        content: "";
+        left: -24px;
+        /* top: 15px; */
+        width: 60px;
+        height: 55px;
+        background: url(../images/process-i1.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        transition: 0.5s;
+      }
+      span.service-box-number:after {
+        position: absolute;
+        content: "";
+        left: -24px;
+        top: -15px;
+        width: 60px;
+        height: 55px;
+        background: url(../images/process-i2.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        transition: 0.5s;
+        opacity: 0;
+      }
+      .service-box-title h3 {
+        font-size: 22px;
+        color: #232323;
+        font-weight: 600;
+        font-family: "Fira Sans";
+        transition: 0.5s;
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+      .service-box-title h3 span,
+      .service-box.style2 .service-box-title h2 span {
+        color: #ad2121;
+      }
+
+      .service-box-title h3 {
+        font-size: 22px;
+        color: #232323;
+        font-weight: 600;
+        font-family: "Fira Sans";
+        transition: 0.5s;
+        margin-top: 0;
+        margin-bottom: 8px;
+       
+      }
+      .service-box.style2:hover .service-content p:hover {
+        color: #fff;
+        z-index: 1;
+      }
+      .service-content {
+        margin-top: 5rem;
+      }
+      .service-content p {
+        color: #282727;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="service-box style2">
+        <div class="card card1">
+          <div class="service-number">
+            <span class="service-box-number">1</span>
+          </div>
+          <div class="service-content">
+            <div class="service-box-title">
+              <h3><span>Idea </span>Generate</h3>
+            </div>
+            <p>Appropriately enhance centered innovation</p>
+          </div>
+        </div>
+      </div>
+      <div class="service-box style2">
+        <div class="card card2">
+          <div class="service-number">
+            <span class="service-box-number">2</span>
+          </div>
+          <div class="service-content">
+            <div class="service-box-title">
+              <h3><span>Idea </span>Generate</h3>
+            </div>
+            <p>Appropriately enhance centered innovation</p>
+          </div>
+        </div>
+      </div>
+      <div class="service-box style2">
+        <div class="card card3">
+          <div class="service-number">
+            <span class="service-box-number">3</span>
+          </div>
+          <div class="service-content">
+            <div class="service-box-title">
+              <h3><span>Idea </span>Generate</h3>
+            </div>
+            <p>Appropriately enhance centered innovation</p>
+          </div>
+        </div>
+      </div>
+      <div class="service-box style2">
+        <div class="card card4">
+          <div class="service-number">
+            <span class="service-box-number">4</span>
+          </div>
+          <div class="service-content">
+            <div class="service-box-title">
+              <h3><span>Idea </span>Generate</h3>
+            </div>
+            <p>Appropriately enhance centered innovation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer with Animations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #141414;
+    color: white;
+    padding: 50px 0;
+}
+
+.newsletter {
+    background-image: url(../images/subscribe-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0;
+    text-align: center;
+    width:70%;
+    height: 80px;
+    margin-left: 12rem;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.newsletter h2 {
+    margin: 20px 0 20px -2px;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-family: "Poppins", Sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    margin-left: 2.1rem;
+}
+
+.subscribe-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-box input[type="email"] {
+    /* padding: 10px; */
+    border: none;
+    /* border-radius: 5px 0 0 5px; */
+    outline: none;
+    width: 400px;
+
+    font-size: 14px;
+    height: 68px;
+    padding: 5px 25px;
+    position: relative;
+    /* width: 100%; */
+    background: #ffffff;
+    /* border: 0; */
+    /* margin-bottom: 0; */
+    border-radius: 35px;
+    outline: 0;
+    margin-left: 5rem;
+}
+
+.subscribe-box button {
+    /* padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: rgb(30, 30, 30);
+    color: #f26339;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; */
+
+
+    
+    position: absolute;
+    /* right: 0; */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    border: medium none;
+    border-radius: 35px;
+    background: #ff3c00;
+    color: #fff;
+    font-family: 'Fira Sans';
+    font-weight: 500;
+    text-align: center;
+    padding: 13px 30px;
+    /* position: absolute; */
+    /* right: 10px;
+    top: 9px; */
+    display: inline-block;
+    z-index: 1;
+    margin-left: 22rem;
+}
+
+.subscribe-box button:hover {
+    background-color: black;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content:space-evenly;
+    padding: 50px 0;
+    margin-left: 5rem;
+}
+
+.section {
+    max-width: 280px;
+}
+
+.section h2 {
+    color: #faf9f9;
+     
+}
+.heading-title-boarder{
+    width: 162px;
+    margin-bottom: 20px;
+    padding: 0px 0px 5px 0px;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: #FF3C00;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    /* margin-top: -2rem; */
+}
+.imgf{
+    width: 50px;
+    margin-left: -4rem;
+    /* margin-bottom: 2rem; */
+    text-align: center;
+}
+.section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section ul li a:hover {
+    color: #f26339;
+}
+
+.section .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    color: #f4f4f4;
+    margin-left: 1rem;
+}
+
+.section .social-icons a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.section .social-icons a:hover {
+    color: #f3f1f1;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    display: flex;
+    gap: 25rem;
+    margin-left: 15rem;
+}
+.footer-bottom img{
+    height: 27px;
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom p span {
+    color: #f26339;
+}
+.ft-last a{
+    text-decoration: none;
+    color: #f4f4f4;
+    margin-top: 2rem;
+    text-align: start;
+}
+.fa-facebook, .fa-twitter {
+    /* position: absolute; */
+    /* left: 50%; */
+    transform: translateX(-50%);
+    background-color: #187DFF;
+    border-radius: 100px;
+    padding: 4px;
+}
+.fa-instagram, .fa-youtube {
+    /* position: absolute; */
+    /* left: 50%; */
+    transform: translateX(-50%);
+    background-color:#ff3c00;
+    border-radius: 100px;
+    padding: 4px;
+}
+
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="newsletter">
+            <h2>Subscribe to our Newsletter</h2>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Enter Your Email...">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="section about">
+                <div class="heading-title-boarder"> 
+                    <h2>About Us</h2>
+                </div>
+                
+                <p>Business Consulting is optimize standing manufactured products and installation synergy. Professionally predominant why professional business</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></i></a>
+                </div>
+            </div>
+            <div class="section company">
+                <div class="heading-title-boarder">
+                    <h2>Company</h2>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="section services">
+                <div class="heading-title-boarder">
+                 <h2>Services</h2>
+                </div>
+                <ul>
+                    <li><a href="#">Strategy & Planning</a></li>
+                    <li><a href="#">Consumer Market</a></li>
+                    <li><a href="#">Data Analysis</a></li>
+                    <li><a href="#">Corporate Finance</a></li>
+                    <li><a href="#">Market Research</a></li>
+                </ul>
+            </div>
+            <div class="section popular-posts">
+                <div class="heading-title-boarder">
+                    <h2>Popular Posts</h2>
+                </div>
+                <div class="ft-last">
+                    <div>
+                        <img class="imgf" src="../images/blog.jpg" alt="blog">
+                        <a class="text-ft" href="#">Building web layouts<br>for dual foldable devices</a><br>
+                        <span>February 12, 2023</span>
+                    </div>
+                    <div>
+                        <img class="imgf" src="../images/blog-1.jpg" alt="blog">
+                        <a class="text-ft" href="#">Top 10 Most Popular<br>Google Chrome apps</a><br>
+                        <span>February 12, 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <img src="../images/logo.png">
+            <p>© 2023 <span>Consen</span> all rights reserved. Design By Dream-IT.</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

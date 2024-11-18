@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bar {
+            border: 1px solid black;
+            height: 10px;
+            width: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inbar {
+            height: 10px;
+            width: 0;
+            background-color: blueviolet;
+            position: absolute;
+            left: 0;
+            animation: bar 0.8s linear forwards;
+        }
+
+        @keyframes bar {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 400px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <div class="inbar"></div>
+
+    </div>
+</body>
+</html>

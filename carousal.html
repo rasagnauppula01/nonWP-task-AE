@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress and Counter on Scroll</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.left-side, .right-side {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-side h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left-side h2 span {
+    color: #ff5722;
+}
+
+.left-side p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+.progress-bar {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.progress-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.progress {
+    background-color: #f6f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 5px;
+}
+
+.progress-fill1 {
+    background-color: red; 
+    height: 100%;
+    width: 64%;
+    transition: width 1s;
+}
+.progress-fill2 {
+    background-color: red; 
+    height: 100%;
+    width: 90%;
+    transition: width 1s;
+}
+.progress-fill3 {
+    background-color: red; 
+    height: 100%;
+    width: 80%;
+    transition: width 1s;
+}
+
+.progress-percent1 {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    left: 22rem;
+    font-size: 14px;
+    color: #ffffff;
+}
+.progress-percent2 {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    left: 32rem;
+    font-size: 14px;
+    color: #ffffff;
+}
+.progress-percent3 {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    left: 28rem;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-side img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.years-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 60px;
+    font-weight: 600;
+    color: #fafafa;
+    margin-top: -7rem;
+    margin-left: -26rem;
+}
+
+.years-experience p {
+    margin-top: 1rem;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.counter {
+    font-size: 40px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h2>Join the Community to learn About our <span>Company</span></h2>
+            <p>Continually generate 2.0 communities and client-focused products. In synergize strategic manufactured products whereas levera.</p>
+            <div class="progress-bar" id="progressBars">
+                <div class="progress-label">Business Strategy</div>
+                <div class="progress" id="businessStrategy">
+                    <div class="progress-fill1" id="businessStrategyFill"></div>
+                </div>
+                <div class="progress-percent1" id="businessStrategyPercent">65%</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-label">Technology Consulting</div>
+                <div class="progress" id="techConsulting">
+                    <div class="progress-fill2" id="techConsultingFill"></div>
+                </div>
+                <div class="progress-percent2" id="techConsultingPercent">90%</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-label">Product Development</div>
+                <div class="progress" id="productDevelopment">
+                    <div class="progress-fill3" id="productDevelopmentFill"></div>
+                </div>
+                <div class="progress-percent3" id="productDevelopmentPercent">80%</div>
+            </div>
+        </div>
+        <div class="right-side" id="counterSection">
+            <img src="images/img-1.png" alt="Company Meeting">
+            <div class="years-experience">
+                <span class="counter" id="yearsExperience">17+</span>
+                <p>YEARS EXPERIENCE</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+/* body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+} */
+
+/* .main-container {
+    width: 100%;
+    background-image: url('ceo-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 36px;
+    color: #232323;
+    margin: 0;
+}
+
+.button {
+    padding: 12px 25px;
+    font-family: 'Fira Sans';
+    font-weight: 500;
+    color: #fff;
+    background: #FF3B00;
+    border-radius: 30px;
+    border: 1px solid #FF3B00;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#plus {
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    border-radius: 25px;
+    text-align: center;
+    background: #fff;
+    color: #FF3B00;
+    margin-left: 12px;
+    border: 2px solid red;
+}
+
+#plus:hover {
+    background: #e82121;
+    color: #eeeae8;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 420px;
+    margin: 20px;
+    border: 2px solid #eadddd;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 1s ease-in-out;
+}
+
+.card:hover {
+    background-color: red;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orangered;
+    transition: top 0.5s ease;
+    z-index: 0;
+}
+
+.card:hover::after {
+    top: 0;
+}
+
+.card-body {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    color: #171616;
+    transition: color 1s ease-in-out;
+}
+
+.card:hover .card-body {
+    color: #ffffff;
+}
+
+.service-box-number {
+    font-size: 55px;
+    font-weight: 800;
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    opacity: 0.1;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.divider {
+    width: 50px;
+    height: 3px;
+    background-color: #f44545;
+    margin: 0 auto 10px auto;
+}
+
+.btn-primary {
+    background-color: #FF3B00;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ce3636;
+    color: #f1e9e4;
+}
+
+#icon {
+    position: absolute;
+    top: -30px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    line-height: 103px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid rgba(35, 35, 35, 0.1);
+    z-index: 1;
+    transition: background-color 0.5s ease;
+}
+
+#icon:hover {
+    background-color: #FF3B00;
+}
+
+.card-img-top {
+    width: 50px;
+    margin-top: -2rem;
+}
+
+.card-img-top:hover {
+    background-color: #ffffff;
+} */
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 95%;
+    height: 45rem;
+    background-image: url('./images/ceo-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 36px;
+    color: #232323;
+    margin: 0;
+}
+
+.button {
+    padding: 12px 25px;
+    font-family: 'Fira Sans';
+    font-weight: 500;
+    color: #fff;
+    background: #FF3B00;
+    border-radius: 30px;
+    border: 1px solid #FF3B00;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#plus {
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    border-radius: 25px;
+    text-align: center;
+    background: #fff;
+    color: #FF3B00;
+    margin-left: 12px;
+    border: 2px solid red;
+}
+
+#plus:hover {
+    background: #e82121;
+    color: #eeeae8;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 370px;
+    margin: 20px;
+    border: 2px solid #eadddd;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+    /* overflow: hidden; */
+    transition: background-color 1s ease-in-out;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /* background-color: orangered; */
+    transition: top 0.5s ease;
+    z-index: 0;
+}
+
+.card-body {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    color: #171616;
+    transition: color 1s ease-in-out;
+}
+
+.service-box-number {
+    font-size: 55px;
+    font-weight: 700;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: -1rem;
+    opacity: 0.3;
+}
+.service-box-number:hover{
+    color: #eadddd;
+    /* opacity: 0.8; */
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.divider {
+    width: 50px;
+    height: 3px;
+    background-color: #e26666;
+    margin: -10px auto 10px auto;
+}
+
+.btn-primary {
+    background-color: #FF3B00;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+#icon {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    line-height: 103px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid rgba(35, 35, 35, 0.1);
+    z-index: 1;
+    transition: background-color 0.5s ease;
+}
+
+.card-img-top {
+    width: 50px;
+    margin-top: 1rem;
+}
+
